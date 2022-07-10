@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapper Query</title>
+<script src="interact.min.js"></script>
+<script src="fc.js"></script>
+<script type="text/javascript" src="tool.js"></script>
+<style type="text/css" id="GroundsViewS1">.map-container .coground{display:block;}</style>
+<style type="text/css" id="StuffsViewS1">.map-container .costuff{display:block;}</style>
+<link rel="stylesheet" type="text/css" href="tool.css">
+</head>
+<body>
+<div id="main1e" class="main1e" data-focused="0" onclick="event.stopPropagation();this.setAttribute('data-focused',1);if(!Editor.Movable&&Editor.CurrentTool!='select')UnselectObjects()">
+<div class="map-container" id="map_container" style='top:105px;left:235px;width:800px;height:400px;background-repeat:no-repeat;'>
+	<div class="bg-grounds"></div>
+	<div class="bg-stuff"></div>
+	<div class="fg-stuff"></div>
+	<div class="fg-grounds"></div>
+</div>
+<div class="selection-bg" id="map-selection-bg0" data-x="0" data-y="0" data-s="0" style="left:0;top:0;"></div>
+</div>
+<div id="mq-ui">
+<nav class="mq-ui-bg" oncontextmenu="HideContextMenu(event)">
+	<div class="container">
+		<div class="otab" style="width:160px;background-image:url('Images/Logo.png');background-repeat:no-repeat;background-size:auto 55%;background-position:center;margin-right:5px"></div>
+		<div class="tab mq-ui-font" onmousedown="Editor.Navbar.Content.Map.Open(event,this.offsetLeft,offsetBottom(this));"><div class="al"></div><span>Map</span></div>
+		<div class="tab mq-ui-font" onmousedown="Editor.Navbar.Content.Edit.Open(event,this.offsetLeft,offsetBottom(this));"><div class="al"></div><span>Edit</span></div>
+		<div class="tab mq-ui-font" onmousedown="Editor.Navbar.Content.View.Open(event,this.offsetLeft,offsetBottom(this));"><div class="al"></div><span>View</span></div>
+		<div class="tab mq-ui-font"><div class="al"></div><span>Find</span></div>
+		<div class="tab mq-ui-font" onmousedown="Editor.Navbar.Content.Action.Open(event,this.offsetLeft,offsetBottom(this));"><div class="al"></div><span>Action</span></div>
+		<div class="tab mq-ui-font"><div class="al"></div><span>Help</span></div>
+	</div>
+</nav>
+<nav class="mq-ui-bg tools-bar" style="top:51px;left:0px;width:65px;height:100%;" oncontextmenu="HideContextMenu(event)">
+	<div class="container">
+		<div class="tool selected" data="default"><div class="pa" style="background-image:url('Images/Icon/Cursor.png');"></div></div>
+		<div class="tool" data="select"><div class="pa" style="background-image:url('Images/Icon/Select1.png');"></div></div>
+		<div class="tool" data="picker"><div class="pa" style="background-image:url('Images/Icon/Picker.png');"></div></div>
+		<div class="tool" data="drect"><div class="pa" style="background-image:url('Images/Icon/Rect1.png');"></div></div>
+		<div class="tool" data="dcircle"><div class="pa" style="background-image:url('Images/Icon/Circle1.png');"></div></div>
+		<div class="tool" data="erase"><div class="pa" style="background-image:url('Images/Icon/Erase.png');"></div></div>
+	</div>
+</nav>
+<nav class="mq-ui-bg layers-win" style="top:51px;right:0px;width:260px;height:100%;" oncontextmenu="HideContextMenu(event)">
+	<div class="tile">
+		<div class="tab open"><div class="base"><div class="container"><span>Properties</span></div></div></div>
+		<div class="tab close"><div class="base"><div class="container"><span>Layers</span></div></div></div>
+	</div>
+	<div class="context-box">
+		<!--div class="row"><div class="map-set-bg"></div></div-->
+		<!--div class="row"><div class="propr"><div class="pr container"><span>Width: </span></div><div class="op container"><div><input type="text" class="blue-input" value="800" id="map_len_cha0elb"></div></div></div></div>
+		<div class="row"><div class="propr"><div class="pr container"><span>Height: </span></div><div class="op container"><div><input type="text" class="blue-input" value="400" id="map_height_cha0elb"></div></div></div></div-->
+	</div>
+</nav>
+</div>
+</div>
+<!--div id="item-dectr" class="mq-ui-font" style="position:fixed;background-color:#000;color:#fff;padding:5px 5px;font-size:20px">
+	Bucket
+</div-->
+<div class="ui-color-picker"></div>
+<div id="UiFormsContainer">
+</div>
+<div class="ui-context-menu" id="ContextMenuObj" style="display:none;left:200px;top:200px;" onmousedown="event.stopPropagation()" onclick="event.preventDefault();event.stopPropagation();" oncontextmenu="event.preventDefault();event.stopPropagation();">
+</div>
+<!--input class="mq-ui-font color-picker-a color-tab-picker" style="position:fixed"-->
+<input type="hidden" style="display:none" class="xml-map-properties" value="">
+<input type="hidden" style="display:none" class="xml-map-stuff" value="">
+<input type="hidden" style="display:none" class="xml-map-obj" value="">
+<script type="text/javascript" src="jscolor.js"></script>
+</body>
+</html>

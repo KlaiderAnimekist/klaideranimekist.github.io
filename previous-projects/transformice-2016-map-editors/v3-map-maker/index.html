@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Modern Map Editor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="string.js"></script>
+	<script type="text/javascript" src="dom.js"></script>
+	<script type="text/javascript" src="def.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="editor.js"></script>
+</head>
+<body class="unselectable">
+	<nav class="ui-navbar1 ui-b">
+		<div class="main">
+			<div class="base" style="cursor:pointer !important;background-color:#0AB;position:absolute;top:0;left:0;padding-left:15px;padding-right:15px;">
+				<div class="option">
+					<div class="context">
+						<span style="color:#fff !important;">MME</span>
+					</div>
+				</div>
+			</div>
+			<div style="position:absolute;top:0;left:105px">
+				<div class="base btab" data-context="Map">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Map</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="Edit">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Edit</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="Selection">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Selection</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="Find">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Find</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="View">
+					<div class="option" data-a>
+						<div class="context">
+							<span>View</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="Goto">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Goto</span>
+						</div>
+					</div>
+				</div>
+				<div class="base btab" data-context="Help">
+					<div class="option" data-a>
+						<div class="context">
+							<span>Help</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="ui-navbar2 ui-b">
+		<div style="margin-top:2px;margin-left:10px">
+			<span class="grounds">Grounds: 0/50</span><span style="margin-left:5px;margin-right:5px;"> </span><span class="objs">Objects: 0/30</span>
+		</div>
+	</div>
+	<div class="main-container">
+		<div class="a-map-field" data-x="0" data-y=0 style="left:237px;top:148px;">
+			<div class="bg-grounds">
+			</div>
+			<div class="bg-joints">
+			</div>
+			<div class="fg-grounds">
+			</div>
+			<div class="fg-joints">
+			</div>
+		</div>
+	</div>
+	<div class="ui-click-locker" acv="n"></div>
+ 	<div class="ui-context-menu" data-which="none" id="context-menu" style="display:none;left:8px;top:50px"></div>
+	<div class="ui-window" style="display:none"></div>
+	<div class="ui-alert-m" style="display:none;opacity:0.0;">
+		<div class="alert-box" data-type="b">
+			<div class="title">...</div><div class="message">...</div>
+		</div>
+	</div>
+</body>
+</html>

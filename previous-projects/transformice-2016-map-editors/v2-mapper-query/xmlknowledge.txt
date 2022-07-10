@@ -1,0 +1,31 @@
+/* <C><P G=[Wind, gravity] C=[Collision] P=[Portal] N=[Night] A=[Soulmate] Ca=[Offscreen hiding] /><Z><S /><D /><O /></Z></C> default  
+   <C><P /><Z><S /><D /><O><O C="6" Y="326" P="0" X="397" /></O></Z></C> obj
+   <C><P /><Z><S><S L="492" o="1f78a4" H="174" X="354" Y="151" T="12" P="0,0,0.3,0.2,0,0,0,0" /></S><D /><O /></Z></C> RECT, ground
+   INTO TAG "DS":
+	--	mouse hole (tag: T)
+	--	cheese (tag: F) 
+	--	player (tag: DS)
+	--	shaman (tag: DC)
+   INTO TAG "O":
+	--	Object: <O C=[type] X=[coord] Y=[coord] P=[rotation,(1=ghost)] />
+   INTO TAG "S":
+	--	Ground: <S c=[collision type] N=[foreground] m=[invisible] L=[length] H=[height] o=[color, IF RECT OR CICLE] X=[coord] Y=[coord] T=[texture] P=[dynamic, mass (0=auto), friction, restitution, rotation, fixed rotation, linear damping, angular damping] />
+*/
+
+Stuffs:
+
+---------------------------
+Mouse hole: 40 (L) 32 (H)
+---------------------------
+
+---------------------------
+Cheese: 46 (L) 27 (H)
+---------------------------
+
+---------------------------
+Mice spawn: 40 (L) 48 (H)
+---------------------------
+
+---------------------------
+Sham spawn: 44 (L) 60 (H)
+---------------------------
